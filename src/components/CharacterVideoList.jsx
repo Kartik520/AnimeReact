@@ -11,7 +11,6 @@ const CharacterVideoList = ({ character, SearchValue }) => {
   const charData = AnimeSource[character];
   const videos = charData?.videos || [];
   const color = 'bg-white';
-
   const filteredVideos = videos.filter(video =>
     video.title.toLowerCase().includes(SearchValue?.toLowerCase() || '')
   );

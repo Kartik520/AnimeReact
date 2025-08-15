@@ -1,6 +1,9 @@
 --- Check List Kartik Tyagi ---
 
-1. searching for videos (development of search bar)
+1. searching for videos (development of search bar) done ----------------------------
 2. requirnmet gathering (development of requirnmet gathering through emmail)
 3. video upload (development of video upload feature rights for admin to upload videos) advance feature for future .......... 
 4. Character story reading and story pics ... good an dmust be included ,
+5. design improvement and UI/UX improvement must be phone responsive. 
+6. Character image change (card character image change after every 3 sec ).
+

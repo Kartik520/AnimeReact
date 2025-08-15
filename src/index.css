@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      background-color: #f0f0f0;
 }
 /* 
 body {
@@ -44,8 +45,13 @@ body {
     background-position: 0 0, 0 0, 30px 52px, 30px 52px;
     font-family: Arial, sans-serif;
 } */
-body{
-  
+
+body {
+  background-image: url('./assets/wallhaven-d8gygl_1280x720.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .wave {
@@ -130,7 +136,7 @@ body{
       opacity: 1;
       display: block;
       width: 250px;
-      transform: translateX(50px);
+      transform: translateX(5px);
     }
 
     .playbtn {
@@ -184,13 +190,15 @@ body{
 
   @media (max-width: 600px) {
     .card {
-      position: relative;
-      height: 200px;
-      width: 300px;
-      display: flex;
-      justify-content: center;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    }
+    position: relative;
+    height: 200px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      background-color: #f0f0f0;
+      scale: 0.9;
+}
 
     iframe {
       /* width: 300px; */

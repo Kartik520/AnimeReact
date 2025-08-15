@@ -5,6 +5,7 @@ import VideoPlayer from "../components/VideoPlayer";
 import change_image_character from "../utils/changeCharaterImage";
 import characters from "../data/characterData";
 import CharacterVideoList from "../components/CharacterVideoList";
+import Footer from "../components/Footer";
 
 const AnimePage = () => {
   const [activeCharacter, setActiveCharacter] = useState(null);
@@ -12,13 +13,9 @@ const AnimePage = () => {
 
   const handlePlay = (name) => {
     if (activeCharacter === name) {
-      console.log(name);
-      console.log("this is active character " + activeCharacter);
       change_image_character(name, 2); // stop
       setActiveCharacter(null);
     } else {
-      console.log(name);
-      console.log(activeCharacter);
       change_image_character(name, 1); // play
       setActiveCharacter(name);
     }
@@ -30,42 +27,55 @@ const AnimePage = () => {
   };
 
   return (
-    <div className="text-gray-800">
-      <Navbar />
-      <div className="container w-full mx-auto px-4 py-6">
+    <div className="flex flex-col min-h-screen text-gray-800">
+
+
+      <main className="flex-grow container w-full mx-auto px-4 py-6">
         {characters.map((char) => {
           if (activeCharacter && activeCharacter !== char.name) return null;
 
           return (
+            <div className="flex flex-col items-center">
+
             <CharacterCard
               key={char.name}
               character={char}
+              color={char.waveColor}
               onPlay={handlePlay}
               isActive={activeCharacter === char.name}
             />
+                          
+            </div>
           );
         })}
+
         {activeCharacter && (
-          <>
+          <div className="flex flex-col items-center">
             <input
               type="text"
+              id="Videotxt"
               placeholder="Search character video"
               value={SearchValue}
               onChange={(e) => setSearchValue(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+              className="w-80 px-4 py-2 border border-gray-300 rounded-lg shadow-sm 
+                 focus:outline-none focus:ring-2 focus:ring-blue-500 
+                 focus:border-transparent transition-all duration-200 mb-4"
             />
 
             <CharacterVideoList
               character={activeCharacter}
               SearchValue={SearchValue}
             />
-          </>
+          </div>
         )}
+
         <VideoPlayer
           character={activeCharacter}
           characterId={getVideoId(activeCharacter)}
         />
-      </div>
+      </main>
+
+
     </div>
   );
 };

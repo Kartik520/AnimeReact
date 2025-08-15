@@ -1,17 +1,19 @@
 import React from "react";
+import characters from "../data/characterData";
 
-const CharacterCard = ({ character, onPlay, isActive }) => {
+const CharacterCard = ({ character,color, onPlay, isActive }) => {
   return (
     <>
       <div
-        className={`card p-4 border shadow rounded mb-4 ${
+        className={`card p-4 border shadow rounded mb-4  ${
           isActive ? "Activecard" : ""
         }`}
       >
+        characters
         <svg class="wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
           <path
-            fill="#ffffff"
-            fill-opacity="0.5"
+            fill={color}
+            fill-opacity="5"
             d="M0,160 C480,260 960,60 1440,160 L1440,0 L0,0 Z"
           ></path>
         </svg>
