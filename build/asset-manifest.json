@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AnimeReact/static/css/main.1ef745ac.css",
+    "main.js": "/AnimeReact/static/js/main.5c87326a.js",
+    "static/media/wallhaven-d8gygl_1280x720.png": "/AnimeReact/static/media/wallhaven-d8gygl_1280x720.83027f9f00f596aabf89.png",
+    "static/media/animefyLogo.png": "/AnimeReact/static/media/animefyLogo.013012c1b3031a91a6b4.png",
+    "index.html": "/AnimeReact/index.html",
+    "main.1ef745ac.css.map": "/AnimeReact/static/css/main.1ef745ac.css.map",
+    "main.5c87326a.js.map": "/AnimeReact/static/js/main.5c87326a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ef745ac.css",
+    "static/js/main.5c87326a.js"
+  ]
+}
